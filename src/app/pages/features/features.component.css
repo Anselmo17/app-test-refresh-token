@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+.container-logo{
+    margin: 0 auto;
+    width: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-logo-texto{
+    font-size: 1.7em;
+    padding: 15px;
+}
+
+.container-image {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 600px;
+    height: 600px;
+}

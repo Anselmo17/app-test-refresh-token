@@ -1,0 +1,18 @@
+<section class="container main">
+    <div class="container card login">
+        <div class="card-body">
+            <form [formGroup]="form">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email" aria-describedby="email" placeholder="Digite seu email...">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="senha" placeholder="Digite seu password...">
+                </div>
+                <button type="button" class="btn btn-primary" (click)="onLogin()">Submit</button>
+            </form>
+        </div>    
+    </div>
+</section>
+

@@ -1,0 +1,20 @@
+
+
+
+- criar login ok 
+- criar um gerador de token
+- criar um refresh token
+
+
+
+
+
+https://www.horadecodar.com.br/2022/03/26/como-criar-uma-data-com-um-timezone-especifico-em-javascript/
+
+https://stackoverflow.com/questions/38399465/how-to-get-list-of-all-timezones-in-javascript
+
+
+
+Avenida Pedro Paulino, prédio 414, apto 31A, Cohab 1, Itapevi - SP, CEP: 06663-000 - Telefone 99882-0724
+
+

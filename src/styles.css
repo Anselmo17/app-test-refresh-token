@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&family=Dancing+Script:wght@400;500;700&family=Kanit:ital,wght@0,200;1,100&family=Nunito:wght@300&family=Overpass:ital,wght@1,300&family=Roboto+Slab:wght@300;400&family=Roboto:ital,wght@0,400;1,500&family=Sevillana&family=Ubuntu:wght@300;400&family=Yeon+Sung&display=swap');
+
+body{
+    font-family: 'Yeon Sung', cursive;
+    background: rgb(228, 229, 235);
+    
+}
