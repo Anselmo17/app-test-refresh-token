@@ -4,5 +4,8 @@
 body{
     font-family: 'Yeon Sung', cursive;
     background: rgb(228, 229, 235);
+    background-image: url("./assets/images/nuvem.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
