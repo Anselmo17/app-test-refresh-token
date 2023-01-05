@@ -32,3 +32,6 @@ https://balta.io/blog/login-logout-protecao-de-rotas-envio-de-tokens-com-angular
 
 ## bootstrap
 https://getbootstrap.com/docs/5.2/components/navbar/
+
+## link de exemplo para adicionar o refresh token
+https://www.bezkoder.com/angular-12-refresh-token/
