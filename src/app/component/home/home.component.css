@@ -1,9 +1,17 @@
 h1 {
-    font-size: 3em;
+    font-size: 4rem;
     color: rgb(39, 10, 10);
     text-align: center;
 }
 
 .feature {
     border: 2px black solid;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+.texto{
+    font-size: 1.3rem;
 }
