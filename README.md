@@ -37,3 +37,6 @@ https://getbootstrap.com/docs/5.2/components/navbar/
 https://www.bezkoder.com/angular-12-refresh-token/
 https://www.youtube.com/watch?v=OG8vbzVuFoc
 https://github.com/scalablescripts/angular-auth-refresh
+
+## link gerador jwt backend
+https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-nodejs/

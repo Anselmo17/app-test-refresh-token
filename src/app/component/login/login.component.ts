@@ -27,11 +27,11 @@ export class LoginComponent {
     });
   }
 
-  onLogin() {
+  onLoginOld() {
     console.log(this.form.value);
     const { email, senha } = this.form.value;
     //validar senha
-    if (email === 'teste' && senha === 'teste123') {
+    if (email === 'teste@gmail.com' && senha === 'teste') {
       // redirect
       this.router.navigate(['home']);
       return;
@@ -40,7 +40,7 @@ export class LoginComponent {
     this.router.navigate(['/', '']);
   }
 
-  submit() {
+  onLogin() {
     this.http.post(environment.API + 'api/login', this.form.getRawValue(), { withCredentials: true })
       .subscribe((res: any) => {
         AuthInterceptor.accessToken = res.token;
