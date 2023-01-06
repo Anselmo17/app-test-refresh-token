@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthInterceptor } from 'src/app/interceptors/auth.interceptor.ts/auth.interceptor';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +12,14 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  errorMessage = '';
+  isLoginFailed = false;
   form: FormGroup;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private http: HttpClient,
+
   ) {
     this.form = new FormGroup({
       email: new FormControl('', [Validators.email]),
@@ -29,8 +36,21 @@ export class LoginComponent {
       this.router.navigate(['home']);
       return;
     }
-    // 
     // redirect
     this.router.navigate(['/', '']);
   }
+
+  submit() {
+    this.http.post(environment.API + 'api/login', this.form.getRawValue(), { withCredentials: true })
+      .subscribe((res: any) => {
+        AuthInterceptor.accessToken = res.token;
+
+        this.router.navigate(['/']);
+      }, (error) => {
+        // redirect
+        this.router.navigate(['/', '']);
+        console.log(error);
+      });
+  }
+
 }

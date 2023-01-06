@@ -5,10 +5,6 @@
 export const environment = {
   production: false,
   API: "http://localhost:8080/",
-  AUTH_API: "api/auth/",
-  TOKEN_KEY: 'auth-token',
-  REFRESHTOKEN_KEY: 'auth-refreshtoken',
-  USER_KEY: 'auth-user',
 };
 
 /*
