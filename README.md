@@ -35,3 +35,8 @@ https://getbootstrap.com/docs/5.2/components/navbar/
 
 ## link de exemplo para adicionar o refresh token
 https://www.bezkoder.com/angular-12-refresh-token/
+https://www.youtube.com/watch?v=OG8vbzVuFoc
+https://github.com/scalablescripts/angular-auth-refresh
+
+## link gerador jwt backend
+https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-nodejs/
