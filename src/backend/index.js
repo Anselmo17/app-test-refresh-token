@@ -46,6 +46,25 @@ app.post('/login', cors(), (req, res, next) => {
     res.status(500).json({ message: 'Login inválido!' });
 })
 
+app.post('/refresh', cors(), (req, res, next) => {
+    const { email } = req.body;
+    console.log("Gerando o refresh Token jwt");
+    // set header response
+    res.header('Access-Control-Allow-Origin', ['http://localhost:4200']);
+    //esse teste abaixo deve ser feito no seu banco de dados
+
+    if (email) {
+        //auth ok
+        const id = 1; //esse id viria do banco de dados
+        const token = jwt.sign({ id, email }, SECRET, {
+            expiresIn: 300 // expires in 5min
+        });
+        return res.json({ auth: true, token: token });
+    }
+
+    res.status(500).json({ message: 'Login inválido!' });
+})
+
 
 const server = http.createServer(app);
 server.listen(3000);
