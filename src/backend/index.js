@@ -1,12 +1,22 @@
-//index.js
 const http = require('http');
 const express = require('express');
 const app = express();
 const SECRET = "testeRefresh";
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// enable cors
+app.use(
+    cors({
+        origin: true,
+        optionsSuccessStatus: 200,
+        credentials: true,
+    })
+);
 
 app.get('/', (req, res, next) => {
     res.json({ message: "Tudo ok por aqui!" });
@@ -17,9 +27,12 @@ app.get('/clientes', (req, res, next) => {
     res.json([{ id: 1, nome: 'luiz' }]);
 })
 
-app.post('/login', (req, res, next) => {
-    console.log("testando logar e gerar jwt");
+app.post('/login', cors(), (req, res, next) => {
+    console.log("Gerando o Token jwt");
     const { email, senha } = req.body;
+
+    // set header response
+    res.header('Access-Control-Allow-Origin', ['http://localhost:4200']);
     //esse teste abaixo deve ser feito no seu banco de dados
     if (email === 'teste@gmail.com' && senha === 'teste') {
         //auth ok
@@ -32,6 +45,7 @@ app.post('/login', (req, res, next) => {
 
     res.status(500).json({ message: 'Login inválido!' });
 })
+
 
 const server = http.createServer(app);
 server.listen(3000);

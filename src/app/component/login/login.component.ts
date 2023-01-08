@@ -41,15 +41,16 @@ export class LoginComponent {
   }
 
   onLogin() {
-    this.http.post(environment.API + 'api/login', this.form.getRawValue(), { withCredentials: true })
+    this.http.post(environment.API + 'login', this.form.getRawValue(), { withCredentials: true })
       .subscribe((res: any) => {
         AuthInterceptor.accessToken = res.token;
 
-        this.router.navigate(['/']);
+        this.router.navigate(['home']);
       }, (error) => {
         // redirect
-        this.router.navigate(['/', '']);
-        console.log(error);
+        this.router.navigate(['/']);
+        const message = error?.message ? error?.message : 'Houve um erro ao logar.';
+        console.log(message);
       });
   }
 
