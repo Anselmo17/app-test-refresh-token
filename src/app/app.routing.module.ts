@@ -17,7 +17,11 @@ const routes: Routes = [
   {
     path: 'features',
     component: FeaturesComponent,
-  }
+  },
+  {
+    path: '**',
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({
