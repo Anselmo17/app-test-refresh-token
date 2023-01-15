@@ -51,6 +51,7 @@ export class LoginComponent {
         this.router.navigate(['/']);
         const message = error?.message ? error?.message : 'Houve um erro ao logar.';
         console.log(message);
+        alert(message)
       });
   }
 
