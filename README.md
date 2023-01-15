@@ -40,3 +40,8 @@ https://github.com/scalablescripts/angular-auth-refresh
 
 ## link gerador jwt backend
 https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-nodejs/
+
+
+## tarefas para fazer
+- adicionar um serviço para armazenar o token no local storage
+- validar se o token esta valido , se nao tiver redirecionar para a tela de login

@@ -44,11 +44,12 @@ export class LoginComponent {
     this.http.post(environment.API + 'login', this.form.getRawValue(), { withCredentials: true })
       .subscribe((res: any) => {
         AuthInterceptor.accessToken = res.token;
-
+        localStorage.setItem("tokenAcess", res.token);
         this.router.navigate(['home']);
       }, (error) => {
         // redirect
         this.router.navigate(['/']);
+        localStorage.removeItem("tokenAcess");
         const message = error?.message ? error?.message : 'Houve um erro ao logar.';
         console.log(message);
         alert(message)
